@@ -1,0 +1,140 @@
+@import url("fonts.css");
+body {
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-weight: normal;
+  background: #F4F4F4;
+  color: #595959;
+}
+
+div, section {
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 40px 15%;
+  height: 100vh;
+}
+
+.section:nth-of-type(2) {
+  background: gray;
+}
+
+.section.intro > .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section.intro > .wrapper h3:last-of-type {
+  margin: 30px 0 0 0;
+}
+
+.section.intro > .wrapper h5 {
+  margin: 0 0 20px 0;
+}
+
+h3 {
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+h5 {
+  font-size: 20px;
+  opacity: 0.6;
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #595959;
+}
+
+.title {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'ProximaNova-Semibold', sans-serif;
+  border: 1px solid #595959;
+}
+
+.title h1 {
+  font-size: 58px;
+  margin: 0;
+}
+
+.title + h3 {
+  margin-top: 20px !important;
+}
+
+.mouse-down {
+  margin: 60px auto 0 auto;
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.mouse-down:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+  .title h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 690px) {
+  .section.intro {
+    padding-top: 5%;
+    align-items: flex-start;
+  }
+  .title h1 {
+    font-size: 30px;
+  }
+  .title + h3 {
+    margin-top: 10px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  .mouse-down {
+    width: 25px;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(15%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
