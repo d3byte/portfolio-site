@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Sergey Savtyra</title>
+  </head>
+  <body>
+    
+    <section class="section intro">
+      <div class="wrapper">
+        <h3>Sergey Savtyra</h3>
+        <h5>Contact: <a href="mailto:pandinator@protonmail.com">pandinator@protonmail.com</a></h5>
+        <div class="title">
+          <h1>Dev & design initiative</h1>
+        </div>
+        <h3>Quality, performance and robust solutions</h3>
+        <img 
+          class="mouse-down" 
+          src="images/mouse-down.svg" 
+          onerror="this.onerror=null; this.src='images/mouse-down.svg'"
+        />
+      </div>
+    </section>
+
+    <section class="section">
+    </section>
+
+  </body>
+
+  <script src="scripts/scroll-min.js"></script>
+  <script>
+    const target = document.querySelector('.section:nth-of-type(2)'),
+      scroll = new Scroll(document.body)
+    document.querySelector('.mouse-down').addEventListener('click', 
+      () => scroll.to(0, target.offsetTop, { duration: 600, easing: 'easeInCubic' })
+    )
+  </script>
+
+</html>
