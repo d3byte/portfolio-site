@@ -14,17 +14,22 @@ div, section
 
 .section
     display: flex
-    align-items: center
     padding: 40px 15%
     height: 100vh
+    &.centered
+        align-items: center
 
-    &:nth-of-type(2)
-        background: gray
+    .section-title
+        font-family: 'ProximaNova-Bold', sans-serif
+        font-size: 58px
+
     
-    &.intro > .wrapper
+    .wrapper
         display: flex
         flex-direction: column
         width: 100%
+    
+    &.intro > .wrapper
         h3:last-of-type
             margin: 30px 0 0 0
         h5
@@ -76,6 +81,45 @@ a
         opacity: 0.8
 
 
+.portfolio
+    .projects
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        position: relative
+        .category
+            position: absolute
+            left: 0
+            top: -15px
+            font-family: 'ProximaNova-Bold', sans-serif
+            font-size: 36px
+            opacity: 0.8
+        .project
+            width: 48%
+            margin-top: 30px
+            &:first-of-type, &:nth-of-type(2)
+                margin-top: 60px
+            .image
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 150px
+                background: white
+                box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.09)
+                border-radius: 8px
+                border: 1px solid transparent
+                transition: 0.3s
+                img
+                    max-width: 100px
+                &:hover
+                    cursor: pointer
+                    box-shadow: none
+                    border-color: #595959
+            .description
+                text-align: center
+
+
+
 @media (max-width: 1000px)
     .title
         h1
@@ -97,6 +141,30 @@ a
         font-size: 16px
     .mouse-down
         width: 25px
+    .portfolio .projects
+            .project
+                width: 100%
+                &:nth-of-type(2)
+                    margin-top: 30px
+            
+
+
+@media (max-width: 540px)
+    .section
+        .section-title
+            font-size: 44px
+    .portfolio .projects
+        .category
+            font-size: 30px
+
+
+@media (max-width: 340px)
+    .section
+        .section-title
+            font-size: 38px
+    .portfolio .projects
+        .category
+            font-size: 26px
 
 
 @keyframes floating

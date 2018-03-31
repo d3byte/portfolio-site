@@ -12,16 +12,20 @@ div, section {
 
 .section {
   display: flex;
-  align-items: center;
   padding: 40px 15%;
   height: 100vh;
 }
 
-.section:nth-of-type(2) {
-  background: gray;
+.section.centered {
+  align-items: center;
 }
 
-.section.intro > .wrapper {
+.section .section-title {
+  font-family: 'ProximaNova-Bold', sans-serif;
+  font-size: 58px;
+}
+
+.section .wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -86,6 +90,57 @@ a {
   opacity: 0.8;
 }
 
+.portfolio .projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.portfolio .projects .category {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  font-family: 'ProximaNova-Bold', sans-serif;
+  font-size: 36px;
+  opacity: 0.8;
+}
+
+.portfolio .projects .project {
+  width: 48%;
+  margin-top: 30px;
+}
+
+.portfolio .projects .project:first-of-type, .portfolio .projects .project:nth-of-type(2) {
+  margin-top: 60px;
+}
+
+.portfolio .projects .project .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: white;
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.portfolio .projects .project .image img {
+  max-width: 100px;
+}
+
+.portfolio .projects .project .image:hover {
+  cursor: pointer;
+  box-shadow: none;
+  border-color: #595959;
+}
+
+.portfolio .projects .project .description {
+  text-align: center;
+}
+
 @media (max-width: 1000px) {
   .title h1 {
     font-size: 40px;
@@ -111,6 +166,30 @@ a {
   }
   .mouse-down {
     width: 25px;
+  }
+  .portfolio .projects .project {
+    width: 100%;
+  }
+  .portfolio .projects .project:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section .section-title {
+    font-size: 44px;
+  }
+  .portfolio .projects .category {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 340px) {
+  .section .section-title {
+    font-size: 38px;
+  }
+  .portfolio .projects .category {
+    font-size: 26px;
   }
 }
 
