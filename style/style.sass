@@ -130,6 +130,8 @@ a
     .section.intro
         padding-top: 5%
         align-items: flex-start
+        min-height: 50vh
+        overflow: hidden
     .title
         h1
             font-size: 30px
@@ -153,9 +155,11 @@ a
     .section
         .section-title
             font-size: 44px
-    .portfolio .projects
-        .category
-            font-size: 30px
+    .portfolio 
+        padding-top: 0px !important
+        .projects
+            .category
+                font-size: 30px
 
 
 @media (max-width: 340px)
@@ -165,6 +169,33 @@ a
     .portfolio .projects
         .category
             font-size: 26px
+
+
+@media (min-width: 1600px)
+    .section
+        .section-title
+            font-size: 70px
+    .portfolio .projects
+        .category
+            font-size: 46px
+        .project
+            .image
+                height: 230px
+            .description
+                font-size: 30px
+    .title
+        h1
+            font-size: 84px
+        & + h3
+            margin-top: 40px
+            font-size: 40px
+    h3
+        font-size: 40px
+    h5
+        font-size: 32px
+    .mouse-down
+        width: 40px
+        margin-top: 120px
 
 
 @keyframes floating
